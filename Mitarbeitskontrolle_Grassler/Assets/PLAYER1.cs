@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PLAYER1 : MonoBehaviour
 {
+    public float accel;
+    
     Rigidbody Player1;
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,6 @@ public class PLAYER1 : MonoBehaviour
     void AddSpeed()
     {
         float inputForward = Input.GetAxis("Vertical");
-        Player1.AddForce(transform.forward * 10 * inputForward);
+        Player1.AddForce(transform.forward * accel * inputForward);
     }
 }
