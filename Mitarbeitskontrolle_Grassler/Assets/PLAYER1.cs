@@ -40,5 +40,10 @@ public class PLAYER1 : MonoBehaviour
     {
         float inputForward = Input.GetAxis("Vertical");
         Player1.AddForce(transform.forward * accel * inputForward);
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Player1.AddForce(transform.forward * (accel) * inputForward);
+        }
     }
 }
